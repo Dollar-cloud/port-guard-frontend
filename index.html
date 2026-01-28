@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Port Guard – Intrusion Detection System</title>
+  <meta name="description" content="Port Guard IDS - Advanced Intrusion Detection System for network security monitoring">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ LANDING PAGE ============ -->
+  <div id="landingPage">
+    <div class="landing-background">
+      <div class="landing-particles"></div>
+      <div class="landing-grid"></div>
+    </div>
+    <div class="landing-content">
+      <div class="landing-logo">
+        <div class="logo-shield">
+          <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="url(#logoGrad)" stroke-width="1.5">
+            <defs>
+              <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#7c3aed"/>
+                <stop offset="100%" stop-color="#3b82f6"/>
+              </linearGradient>
+            </defs>
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <div class="logo-pulse"></div>
+        </div>
+        <h1 class="landing-title">
+          <span class="title-line">Port</span>
+          <span class="title-line">Guard</span>
+        </h1>
+        <p class="landing-subtitle">Advanced Intrusion Detection System</p>
+      </div>
+      
+      <div class="landing-features">
+        <div class="feature-item animate-float">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3>Real-time Protection</h3>
+          <p>24/7 network monitoring</p>
+        </div>
+        <div class="feature-item animate-float delay-200">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <h3>Advanced Analytics</h3>
+          <p>Deep threat intelligence</p>
+        </div>
+        <div class="feature-item animate-float delay-400">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="8" rx="2"/>
+              <rect x="2" y="14" width="20" height="8" rx="2"/>
+              <circle cx="6" cy="6" r="1"/>
+              <circle cx="6" cy="18" r="1"/>
+            </svg>
+          </div>
+          <h3>Multi-Device Support</h3>
+          <p>Monitor entire networks</p>
+        </div>
+      </div>
+      
+      <button class="landing-cta" id="landingEnterBtn">
+        <span>Enter System</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+      
+      <div class="landing-theme-toggle">
+        <button class="theme-toggle-landing" id="themeToggleLanding" title="Toggle theme">
+          <svg id="sunIconLanding" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg id="moonIconLanding" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BOOT LOADER ============ -->
+  <div id="bootLoader">
+    <div class="radar-container">
+      <div class="radar-ring outer animate-radar-pulse"></div>
+      <div class="radar-ring middle animate-radar-pulse delay-200"></div>
+      <div class="radar-ring inner animate-radar-pulse delay-300"></div>
+      <div class="radar-center"></div>
+      <div class="radar-sweep animate-radar-sweep"></div>
+      <div class="radar-dot top animate-dot-blink"></div>
+      <div class="radar-dot right animate-dot-blink delay-300"></div>
+      <div class="radar-dot left animate-dot-blink delay-500"></div>
+    </div>
+    <div class="boot-text">
+      <h1 class="gradient-text">Port Guard</h1>
+      <p class="animate-text-pulse">Initializing System...</p>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-text" id="progressText">0% Complete</p>
+    </div>
+  </div>
+
+  <!-- ============ AUTH SCREEN ============ -->
+  <div id="authScreen" class="hidden">
+    <div class="auth-container animate-scale-in">
+      <div class="auth-header">
+        <svg class="shield-icon" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="url(#authGrad)" stroke-width="1.5">
+          <defs>
+            <linearGradient id="authGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <h1 class="gradient-text">Port Guard</h1>
+        <h2 id="formTitle">Welcome Back</h2>
+        <p>Intrusion Detection System</p>
+      </div>
+      
+      <div id="authMessage" class="auth-message hidden"></div>
+      
+      <form id="authForm">
+        <div class="form-group">
+          <label for="username">Username or Email</label>
+          <input type="text" id="username" class="form-control" placeholder="Enter username or email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Sign In</button>
+      </form>
+      
+      <div class="toggle-links">
+        <p><span id="toggleText">Don't have an account?</span> <button id="toggleModeBtn">Sign Up</button></p>
+        <button id="toggleAdminBtn">Admin Login</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ SCOPE MODAL ============ -->
+  <div id="scopeModal" class="hidden">
+    <div class="scope-container animate-scale-in">
+      <div class="scope-header">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#scopeGrad)" stroke-width="1.5">
+          <defs>
+            <linearGradient id="scopeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="20" height="8" rx="2"/>
+          <rect x="2" y="14" width="20" height="8" rx="2"/>
+          <circle cx="6" cy="6" r="1"/>
+          <circle cx="6" cy="18" r="1"/>
+        </svg>
+        <h1 class="gradient-text">Port Guard</h1>
+        <h2>Select Interface Scope</h2>
+      </div>
+      
+      <div class="scope-options" id="scopeOptions">
+        <!-- Options will be rendered by JS based on role -->
+      </div>
+      
+      <div id="customCountDiv" class="custom-count hidden">
+        <div class="device-selector">
+          <div class="selector-mask top"></div>
+          <div class="selector-mask bottom"></div>
+          <div class="selector-highlight"></div>
+          <div class="selector-scroll" id="deviceScroll">
+            <div class="selector-spacer"></div>
+            <!-- Numbers will be generated by JS -->
+            <div class="selector-spacer"></div>
+          </div>
+        </div>
+        <span>devices</span>
+      </div>
+      <p id="selectedDeviceText" class="selected-device-text hidden">Selected: <span id="selectedCount">5</span> devices</p>
+      
+      <button class="btn btn-primary" id="scopeContinueBtn">Continue</button>
+    </div>
+  </div>
+
+  <!-- ============ APP CONTAINER ============ -->
+  <div id="appContainer" class="hidden">
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#topbarGrad)" stroke-width="1.5">
+          <defs>
+            <linearGradient id="topbarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#7c3aed"/>
+              <stop offset="100%" stop-color="#3b82f6"/>
+            </linearGradient>
+          </defs>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        <span class="gradient-text">Port Guard</span>
+      </div>
+      <div class="topbar-right">
+        <div id="statusPill" class="status-pill secure">System Secure</div>
+        <button class="notification-btn" id="notificationBtn" title="Notifications">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+          </svg>
+          <span class="notification-badge hidden" id="notificationBadge">0</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+          <svg id="sunIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg id="moonIcon" class="hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <button class="user-info-btn" id="userInfoBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+          <span id="userInfo"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Monitoring Bar -->
+      <div class="monitoring-bar">
+        <div class="monitoring-left">
+          <div class="monitoring-status">
+            <span class="label">Monitoring:</span>
+            <span id="monitoringStatusText" class="active">Active</span>
+          </div>
+        </div>
+        <div class="monitoring-buttons">
+          <button class="btn btn-start" id="startBtn">Start</button>
+          <button class="btn btn-stop" id="stopBtn">Stop</button>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div id="mainContent"></div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+      <button class="nav-btn" id="navProfile" title="Profile">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+      <button class="nav-btn" id="navSettings" title="Settings">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </button>
+      <button class="nav-btn danger" id="navLogout" title="Logout">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+          <line x1="12" y1="2" x2="12" y2="12"/>
+        </svg>
+      </button>
+    </nav>
+  </div>
+
+  <!-- Notification Center Panel -->
+  <div id="notificationOverlay" class="notification-overlay hidden">
+    <div class="notification-panel animate-scale-in" id="notificationPanel">
+      <div class="notification-header">
+        <h3>Notifications</h3>
+        <button class="notification-close" id="notificationClose">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="notification-list" id="notificationList">
+        <!-- Notifications will be rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert Detail Side Panel -->
+  <div id="alertDetailOverlay" class="alert-detail-overlay hidden">
+    <div class="alert-detail-panel animate-scale-in" id="alertDetailPanel">
+      <div class="alert-detail-header">
+        <h3 id="alertDetailTitle">Alert Details</h3>
+        <button class="alert-detail-close" id="alertDetailClose">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="alert-detail-content" id="alertDetailContent">
+        <!-- Alert details will be rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Panel Overlay -->
+  <div id="profileOverlay" class="profile-overlay hidden">
+    <div class="profile-panel animate-scale-in" id="profilePanel">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <div class="profile-info">
+          <h3 id="profileName"></h3>
+          <p id="profileRole"></p>
+        </div>
+        <button class="profile-close" id="profileClose">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="profile-content" id="profileContent">
+        <!-- Profile details will be rendered by JS -->
+      </div>
+      <div class="profile-badge" id="profileBadge"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
