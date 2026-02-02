@@ -31,6 +31,7 @@ The primary focus of this project is **frontend architecture, UI/UX design, anim
 ## Live Demo
 🔗 https://dollar-cloud.github.io/port-guard-frontend
 ##Admin 
--Username=admin
+-Username=alice
 -Pass=adminpass1
+
 
